@@ -1,0 +1,142 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NewSignal_0011 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0017 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ vert_axis : 56|2@1- (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0045 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ temp : 48|8@1- (0.5,24) [0|0] "C" Vector__XXX
+
+BO_ 1552 rotation_xy: 8 Vector__XXX
+ SG_ rotationx : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ rotationy : 32|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1553 rotationz: 8 Vector__XXX
+ SG_ rotationz : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1569 gps_course_speed: 8 Vector__XXX
+ SG_ gps_course : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ gps_speed : 32|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1536 accelxyz_temp_vertaxis_orientati: 8 Vector__XXX
+ SG_ accelx : 0|16@1- (3.91,0) [0|0] "" Vector__XXX
+ SG_ accely : 16|16@1- (3.91,0) [0|0] "" Vector__XXX
+ SG_ accelz : 32|16@1- (3.91,0) [0|0] "" Vector__XXX
+ SG_ temp : 48|8@1- (0.5,24) [0|0] "c" Vector__XXX
+ SG_ vert_axis : 56|2@1- (1,0) [0|0] "" Vector__XXX
+ SG_ orientation : 58|3@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1570 gps_longitude: 8 Vector__XXX
+ SG_ longitude_minutes : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ longitude_degrees : 32|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ indicator_East_West : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1571 gps_latitude: 8 Vector__XXX
+ SG_ latitude_minutes : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ latitude_degrees : 32|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ indicator_north_south : 48|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1531 magnet_field: 8 Vector__XXX
+ SG_ magfield_X : 0|16@1- (0.3,0) [0|0] "microTesla" Vector__XXX
+ SG_ magfield_Y : 16|16@1- (0.3,0) [0|0] "microTesla" Vector__XXX
+ SG_ magfield_Z : 32|16@1- (0.3,0) [0|0] "microTesla" Vector__XXX
+
+BO_ 1568 gps_status: 8 Vector__XXX
+ SG_ antenna_status : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ num_sattelites : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ nav_method : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1573 gps_delusionsA: 8 Vector__XXX
+ SG_ pdop : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ hdop : 32|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1574 gps_delusionsB: 8 Vector__XXX
+ SG_ vdop : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1572 gps_altitude: 8 Vector__XXX
+ SG_ altitude : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1584 IO: 8 Vector__XXX
+ SG_ Din1_status : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Din2_status : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Dout_status : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SD_present : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GPS_powerStatus : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Device_ID : 5|3@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ SG_ 1569 gps_course "float, degrees";
+CM_ SG_ 1569 gps_speed "float, km/h";
+CM_ SG_ 1570 longitude_minutes "float
+";
+CM_ SG_ 1570 indicator_East_West "0=init
+69=east
+87=west
+";
+CM_ SG_ 1571 latitude_minutes "float
+";
+CM_ SG_ 1571 indicator_north_south "0=init
+78=north
+83=south
+";
+CM_ SG_ 1573 pdop "lower=better
+";
+CM_ SG_ 1573 hdop "lower=better
+";
+CM_ SG_ 1574 vdop "lower=better
+";
+VAL_ 1536 vert_axis 0 "undefined" 1 "x axis" 2 "y axis" 3 "z axis" ;
+VAL_ 1536 orientation 0 "flat" 1 "flat upside down" 2 "landscape left" 3 "landscape right" 4 "portrait" 5 "portrait upside down" ;
+VAL_ 1570 indicator_East_West 0 "init" 69 "east" 87 "west" ;
+VAL_ 1571 indicator_north_south 0 "init" 78 "north" 83 "south" ;
+VAL_ 1568 antenna_status 0 "INIT" 1 "don't know" 2 "ok" 3 "short" 4 "open" ;
+VAL_ 1568 nav_method 0 "init" 1 "none" 2 "2d" 3 "3d" ;
+SIG_VALTYPE_ 1552 rotationx : 1;
+SIG_VALTYPE_ 1552 rotationy : 1;
+SIG_VALTYPE_ 1553 rotationz : 1;
+SIG_VALTYPE_ 1569 gps_course : 1;
+SIG_VALTYPE_ 1569 gps_speed : 1;
+SIG_VALTYPE_ 1570 longitude_minutes : 1;
+SIG_VALTYPE_ 1571 latitude_minutes : 1;
+SIG_VALTYPE_ 1573 pdop : 1;
+SIG_VALTYPE_ 1573 hdop : 1;
+SIG_VALTYPE_ 1574 vdop : 1;
+SIG_VALTYPE_ 1572 altitude : 1;
+

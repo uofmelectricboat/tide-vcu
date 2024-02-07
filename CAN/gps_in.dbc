@@ -1,0 +1,66 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 1616 out_io: 8 Vector__XXX
+ SG_ dout_set : 0|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ gps_setpower : 1|1@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1617 out_poweroff: 8 Vector__XXX
+ SG_ gps_poweroff : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1618 out_gyro: 8 Vector__XXX
+ SG_ gyro_set_scale : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1619 out_bmc_accelscale: 8 Vector__XXX
+ SG_ acc_set_scale : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1620 save_config: 8 Vector__XXX
+ SG_ config_savetoEEPROM : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1623 out_acc_fast_calibration: 8 Vector__XXX
+ SG_ Acc_SetCalibTarget_X : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_y : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_Z : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Acc_startFastCalib : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+VAL_ 1618 gyro_set_scale 0 "+- 250 degrees/second" 1 "+- 500 degrees/second" 2 "+- 2000 degrees/second" ;
+VAL_ 1619 acc_set_scale 1 "+- 2g" 2 "+- 4g" 3 "+- 8g" 4 "+- 16g" ;
+VAL_ 1623 Acc_SetCalibTarget_X 0 "0g" 1 "1g" 2 "-1g" ;
+
