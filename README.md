@@ -4,9 +4,10 @@ TiDE main controller built using MATLAB Simulink and Raptor Toolchain.
 
 * [Software Setup Guide](#software-setup-guide)
 * [Project Overview](#project-overview)
-* [Decoding/Encoding CAN Messages](#decodingencoding-can-messages)
 * [Electrical System Block Diagram](#electrical-system-block-diagram)
 * [Useful Links](#useful-links)
+
+Our DBC files are organized in a separate repository: [tide-dbc](https://github.com/uofmelectricboat/tide-dbc).
 
 ## Software Setup Guide
 
@@ -23,12 +24,6 @@ We use the [Raptor General Control Model GCM48](https://store.neweagle.net/shop/
 The electronic hardware components on our boat (like sensors and actuators) are programmed using software provided by New Eagle. We have free access to New Eagle’s Raptor Toolkit (i.e. Raptor-Dev and Raptor Cal) ($9600 worth of software!) due to our use of the Raptor GCM.
 
 Typically, we would program our electronic hardware using languages like C or Python to implement low-level driver code provided by manufacturers. The Raptor Toolkit simplifies this process, allowing us to use MATLAB Simulink (supplemented with additional Raptor libraries) to program the VCU. Additionally, we use Vector CANalyzer software to program the CAN bus and Kvaser Database Editor to create the DBC files.
-
-## Decoding/Encoding CAN Messages
-
-A CAN DBC file (CAN database) is a text file that contains information for decoding raw CAN bus data to 'physical values'. We use Kvaser Database Editor, which includes the ability to create and edit DBC files, append DBC files, and visualize the signal construction.
-
-Our DBC files are organized in a separate repository: [tide-dbc](https://github.com/uofmelectricboat/tide-dbc). See also the VCU I/O [masterlist](https://docs.google.com/spreadsheets/d/1l9ZZ65pS-U9dvQTbAR1eJ-93yGe8JyaLVBbAq_j7IOM/edit?usp=sharing).
 
 ## Electrical System Block Diagram
 
