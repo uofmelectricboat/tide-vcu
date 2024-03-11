@@ -6,6 +6,7 @@ TiDE main controller built using MATLAB Simulink and Raptor Toolchain.
 * [Project Overview](#project-overview)
 * [Decoding/Encoding CAN Messages](#decodingencoding-can-messages)
 * [Electrical System Block Diagram](#electrical-system-block-diagram)
+* [Useful Links](#useful-links)
 
 ## Software Setup Guide
 
@@ -23,22 +24,22 @@ The electronic hardware components on our boat (like sensors and actuators) are 
 
 Typically, we would program our electronic hardware using languages like C or Python to implement low-level driver code provided by manufacturers. The Raptor Toolkit simplifies this process, allowing us to use MATLAB Simulink (supplemented with additional Raptor libraries) to program the VCU. Additionally, we use Vector CANalyzer software to program the CAN bus and Kvaser Database Editor to create the DBC files.
 
-### Decoding/Encoding CAN Messages
+## Decoding/Encoding CAN Messages
 
 A CAN DBC file (CAN database) is a text file that contains information for decoding raw CAN bus data to 'physical values'. We use Kvaser Database Editor, which includes the ability to create and edit DBC files, append DBC files, and visualize the signal construction.
 
 Our DBC files are organized in a separate repository: [tide-dbc](https://github.com/uofmelectricboat/tide-dbc). See also the VCU I/O [masterlist](https://docs.google.com/spreadsheets/d/1l9ZZ65pS-U9dvQTbAR1eJ-93yGe8JyaLVBbAq_j7IOM/edit?usp=sharing).
 
-### Useful Links
-
-* [CAN DBC file explained](https://www.csselectronics.com/pages/can-dbc-file-database-intro)
-* [Raw data to decimal converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
-* [Snowfinkle DBC files](https://github.com/uofmelectricboat/Lightning-McSeas/tree/main/dbc%20files) (Summer 2023 PEP Competition)
-
-### Electrical System Block Diagram
+## Electrical System Block Diagram
 
 Below is an image of the current system block diagram (source: [Lucidchart](https://lucid.app/lucidchart/c0bbbfa5-0525-45ad-8ec3-776604d7f318/edit?invitationId=inv_6c9863e5-fb13-4fd6-8d17-4680908d763c&page=0_0#)):
 
 <img src="https://github.com/uofmelectricboat/.github/assets/101139170/32fef8ed-8dbb-4f66-82f4-b4bcb79485ca" alt="drawing" width="350"/>
 
 For more details or access to the Lucidchart file, contact the Electrical Lead.
+
+## Useful Links
+
+* [CAN DBC file explained](https://www.csselectronics.com/pages/can-dbc-file-database-intro)
+* [Raw data to decimal converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+* [Snowfinkle DBC files](https://github.com/uofmelectricboat/Lightning-McSeas/tree/main/dbc%20files) (Summer 2023 PEP Competition)
